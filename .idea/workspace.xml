@@ -1,28 +1,129 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="8a314ede-1eea-4d14-83c7-ccfbce4d7c5f" name="Changes" comment="" />
+    <list default="true" id="8a314ede-1eea-4d14-83c7-ccfbce4d7c5f" name="Changes" comment="TP1">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/libJson.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Earth.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ressource/libJson/libJson/javax.json-1.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ressource/libJson/libJson/javax.json-api-1.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ressource/openjfx-19_windows-x64_bin-sdk/javafx-sdk-19/legal/javafx.base/ADDITIONAL_LICENSE_INFO" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ressource/openjfx-19_windows-x64_bin-sdk/javafx-sdk-19/legal/javafx.base/ASSEMBLY_EXCEPTION" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ressource/openjfx-19_windows-x64_bin-sdk/javafx-sdk-19/legal/javafx.base/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ressource/openjfx-19_windows-x64_bin-sdk/javafx-sdk-19/legal/javafx.controls/ADDITIONAL_LICENSE_INFO" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ressource/openjfx-19_windows-x64_bin-sdk/javafx-sdk-19/legal/javafx.controls/ASSEMBLY_EXCEPTION" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ressource/openjfx-19_windows-x64_bin-sdk/javafx-sdk-19/legal/javafx.controls/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ressource/openjfx-19_windows-x64_bin-sdk/javafx-sdk-19/legal/javafx.fxml/ADDITIONAL_LICENSE_INFO" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ressource/openjfx-19_windows-x64_bin-sdk/javafx-sdk-19/legal/javafx.fxml/ASSEMBLY_EXCEPTION" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ressource/openjfx-19_windows-x64_bin-sdk/javafx-sdk-19/legal/javafx.fxml/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ressource/openjfx-19_windows-x64_bin-sdk/javafx-sdk-19/legal/javafx.graphics/ADDITIONAL_LICENSE_INFO" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ressource/openjfx-19_windows-x64_bin-sdk/javafx-sdk-19/legal/javafx.graphics/ASSEMBLY_EXCEPTION" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ressource/openjfx-19_windows-x64_bin-sdk/javafx-sdk-19/legal/javafx.graphics/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ressource/openjfx-19_windows-x64_bin-sdk/javafx-sdk-19/legal/javafx.graphics/jpeg_fx.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ressource/openjfx-19_windows-x64_bin-sdk/javafx-sdk-19/legal/javafx.graphics/mesa3d.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ressource/openjfx-19_windows-x64_bin-sdk/javafx-sdk-19/legal/javafx.media/ADDITIONAL_LICENSE_INFO" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ressource/openjfx-19_windows-x64_bin-sdk/javafx-sdk-19/legal/javafx.media/ASSEMBLY_EXCEPTION" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ressource/openjfx-19_windows-x64_bin-sdk/javafx-sdk-19/legal/javafx.media/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ressource/openjfx-19_windows-x64_bin-sdk/javafx-sdk-19/legal/javafx.media/directshow.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ressource/openjfx-19_windows-x64_bin-sdk/javafx-sdk-19/legal/javafx.media/glib.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ressource/openjfx-19_windows-x64_bin-sdk/javafx-sdk-19/legal/javafx.media/gstreamer.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ressource/openjfx-19_windows-x64_bin-sdk/javafx-sdk-19/legal/javafx.media/libffi.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ressource/openjfx-19_windows-x64_bin-sdk/javafx-sdk-19/legal/javafx.swing/ADDITIONAL_LICENSE_INFO" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ressource/openjfx-19_windows-x64_bin-sdk/javafx-sdk-19/legal/javafx.swing/ASSEMBLY_EXCEPTION" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ressource/openjfx-19_windows-x64_bin-sdk/javafx-sdk-19/legal/javafx.swing/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ressource/openjfx-19_windows-x64_bin-sdk/javafx-sdk-19/legal/javafx.web/ADDITIONAL_LICENSE_INFO" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ressource/openjfx-19_windows-x64_bin-sdk/javafx-sdk-19/legal/javafx.web/ASSEMBLY_EXCEPTION" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ressource/openjfx-19_windows-x64_bin-sdk/javafx-sdk-19/legal/javafx.web/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ressource/openjfx-19_windows-x64_bin-sdk/javafx-sdk-19/legal/javafx.web/icu_web.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ressource/openjfx-19_windows-x64_bin-sdk/javafx-sdk-19/legal/javafx.web/libxml2.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ressource/openjfx-19_windows-x64_bin-sdk/javafx-sdk-19/legal/javafx.web/libxslt.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ressource/openjfx-19_windows-x64_bin-sdk/javafx-sdk-19/legal/javafx.web/webkit.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ressource/openjfx-19_windows-x64_bin-sdk/javafx-sdk-19/lib/javafx-swt.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ressource/openjfx-19_windows-x64_bin-sdk/javafx-sdk-19/lib/javafx.base.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ressource/openjfx-19_windows-x64_bin-sdk/javafx-sdk-19/lib/javafx.controls.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ressource/openjfx-19_windows-x64_bin-sdk/javafx-sdk-19/lib/javafx.fxml.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ressource/openjfx-19_windows-x64_bin-sdk/javafx-sdk-19/lib/javafx.graphics.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ressource/openjfx-19_windows-x64_bin-sdk/javafx-sdk-19/lib/javafx.media.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ressource/openjfx-19_windows-x64_bin-sdk/javafx-sdk-19/lib/javafx.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ressource/openjfx-19_windows-x64_bin-sdk/javafx-sdk-19/lib/javafx.swing.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ressource/openjfx-19_windows-x64_bin-sdk/javafx-sdk-19/lib/javafx.web.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ressource/openjfx-19_windows-x64_bin-sdk/javafx-sdk-19/src.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataFlight.iml" beforeDir="false" afterPath="$PROJECT_DIR$/DataFlight.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Aeroport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Aeroport.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Interface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/World.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="2IdFBd0PuNIpZ6kwGHCgTjF08i7" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false"
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/Moi/IdeaProjects/DataFlight/src/ressource/openjfx-19_windows-x64_bin-sdk/javafx-sdk-19/lib",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Moi\IdeaProjects\DataFlight\src\ressource" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Moi\IdeaProjects\DataFlight\src" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Interface" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Interface" />
+      <module name="DataFlight" />
+      <option name="VM_PARAMETERS" value="--module-path &quot;src/ressource/openjfx-19_windows-x64_bin-sdk/javafx-sdk-19/lib&quot; --add-modules javafx.controls" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Interface" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -31,8 +132,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670503421029</updated>
+      <workItem from="1670503422548" duration="11497000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -44,5 +149,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="TP1" />
+    <option name="LAST_COMMIT_MESSAGE" value="TP1" />
   </component>
 </project>
