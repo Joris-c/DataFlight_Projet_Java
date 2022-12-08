@@ -1,13 +1,15 @@
+import javafx.scene.Group;
 import javafx.scene.shape.Sphere;
 import javafx.scene.transform.Rotate;
 
 import java.util.ArrayList;
 
-public class Earth {
+public class Earth extends Group {
 
-    Rotate ry;
-    Sphere sph;
-    ArrayList<Sphere> yellowSphere = new ArrayList<>();
+    Sphere sph = new Sphere(300);
 
 
+    public Earth() {
+        this.getChildren().add(sph);
+    }
 }
