@@ -4,59 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8a314ede-1eea-4d14-83c7-ccfbce4d7c5f" name="Changes" comment="TP1">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/libJson.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Earth.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ressource/libJson/libJson/javax.json-1.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ressource/libJson/libJson/javax.json-api-1.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ressource/openjfx-19_windows-x64_bin-sdk/javafx-sdk-19/legal/javafx.base/ADDITIONAL_LICENSE_INFO" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ressource/openjfx-19_windows-x64_bin-sdk/javafx-sdk-19/legal/javafx.base/ASSEMBLY_EXCEPTION" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ressource/openjfx-19_windows-x64_bin-sdk/javafx-sdk-19/legal/javafx.base/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ressource/openjfx-19_windows-x64_bin-sdk/javafx-sdk-19/legal/javafx.controls/ADDITIONAL_LICENSE_INFO" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ressource/openjfx-19_windows-x64_bin-sdk/javafx-sdk-19/legal/javafx.controls/ASSEMBLY_EXCEPTION" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ressource/openjfx-19_windows-x64_bin-sdk/javafx-sdk-19/legal/javafx.controls/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ressource/openjfx-19_windows-x64_bin-sdk/javafx-sdk-19/legal/javafx.fxml/ADDITIONAL_LICENSE_INFO" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ressource/openjfx-19_windows-x64_bin-sdk/javafx-sdk-19/legal/javafx.fxml/ASSEMBLY_EXCEPTION" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ressource/openjfx-19_windows-x64_bin-sdk/javafx-sdk-19/legal/javafx.fxml/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ressource/openjfx-19_windows-x64_bin-sdk/javafx-sdk-19/legal/javafx.graphics/ADDITIONAL_LICENSE_INFO" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ressource/openjfx-19_windows-x64_bin-sdk/javafx-sdk-19/legal/javafx.graphics/ASSEMBLY_EXCEPTION" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ressource/openjfx-19_windows-x64_bin-sdk/javafx-sdk-19/legal/javafx.graphics/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ressource/openjfx-19_windows-x64_bin-sdk/javafx-sdk-19/legal/javafx.graphics/jpeg_fx.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ressource/openjfx-19_windows-x64_bin-sdk/javafx-sdk-19/legal/javafx.graphics/mesa3d.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ressource/openjfx-19_windows-x64_bin-sdk/javafx-sdk-19/legal/javafx.media/ADDITIONAL_LICENSE_INFO" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ressource/openjfx-19_windows-x64_bin-sdk/javafx-sdk-19/legal/javafx.media/ASSEMBLY_EXCEPTION" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ressource/openjfx-19_windows-x64_bin-sdk/javafx-sdk-19/legal/javafx.media/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ressource/openjfx-19_windows-x64_bin-sdk/javafx-sdk-19/legal/javafx.media/directshow.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ressource/openjfx-19_windows-x64_bin-sdk/javafx-sdk-19/legal/javafx.media/glib.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ressource/openjfx-19_windows-x64_bin-sdk/javafx-sdk-19/legal/javafx.media/gstreamer.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ressource/openjfx-19_windows-x64_bin-sdk/javafx-sdk-19/legal/javafx.media/libffi.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ressource/openjfx-19_windows-x64_bin-sdk/javafx-sdk-19/legal/javafx.swing/ADDITIONAL_LICENSE_INFO" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ressource/openjfx-19_windows-x64_bin-sdk/javafx-sdk-19/legal/javafx.swing/ASSEMBLY_EXCEPTION" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ressource/openjfx-19_windows-x64_bin-sdk/javafx-sdk-19/legal/javafx.swing/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ressource/openjfx-19_windows-x64_bin-sdk/javafx-sdk-19/legal/javafx.web/ADDITIONAL_LICENSE_INFO" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ressource/openjfx-19_windows-x64_bin-sdk/javafx-sdk-19/legal/javafx.web/ASSEMBLY_EXCEPTION" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ressource/openjfx-19_windows-x64_bin-sdk/javafx-sdk-19/legal/javafx.web/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ressource/openjfx-19_windows-x64_bin-sdk/javafx-sdk-19/legal/javafx.web/icu_web.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ressource/openjfx-19_windows-x64_bin-sdk/javafx-sdk-19/legal/javafx.web/libxml2.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ressource/openjfx-19_windows-x64_bin-sdk/javafx-sdk-19/legal/javafx.web/libxslt.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ressource/openjfx-19_windows-x64_bin-sdk/javafx-sdk-19/legal/javafx.web/webkit.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ressource/openjfx-19_windows-x64_bin-sdk/javafx-sdk-19/lib/javafx-swt.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ressource/openjfx-19_windows-x64_bin-sdk/javafx-sdk-19/lib/javafx.base.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ressource/openjfx-19_windows-x64_bin-sdk/javafx-sdk-19/lib/javafx.controls.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ressource/openjfx-19_windows-x64_bin-sdk/javafx-sdk-19/lib/javafx.fxml.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ressource/openjfx-19_windows-x64_bin-sdk/javafx-sdk-19/lib/javafx.graphics.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ressource/openjfx-19_windows-x64_bin-sdk/javafx-sdk-19/lib/javafx.media.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ressource/openjfx-19_windows-x64_bin-sdk/javafx-sdk-19/lib/javafx.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ressource/openjfx-19_windows-x64_bin-sdk/javafx-sdk-19/lib/javafx.swing.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ressource/openjfx-19_windows-x64_bin-sdk/javafx-sdk-19/lib/javafx.web.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ressource/openjfx-19_windows-x64_bin-sdk/javafx-sdk-19/src.zip" afterDir="false" />
+    <list default="true" id="8a314ede-1eea-4d14-83c7-ccfbce4d7c5f" name="Changes" comment="Photo de la terre">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataFlight.iml" beforeDir="false" afterPath="$PROJECT_DIR$/DataFlight.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Aeroport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Aeroport.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Earth.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Earth.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Interface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/World.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,23 +36,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Moi/IdeaProjects/DataFlight/src/ressource/openjfx-19_windows-x64_bin-sdk/javafx-sdk-19/lib",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Moi/IdeaProjects/DataFlight/src/ressource/openjfx-19_windows-x64_bin-sdk/javafx-sdk-19/lib&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Moi\IdeaProjects\DataFlight\src\ressource" />
@@ -109,7 +61,7 @@
       <recent name="C:\Users\Moi\IdeaProjects\DataFlight\src" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Interface">
     <configuration name="Interface" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Interface" />
       <module name="DataFlight" />
@@ -118,9 +70,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="DataFlight" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Interface" />
+        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -132,8 +92,46 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670503421029</updated>
-      <workItem from="1670503422548" duration="11497000" />
+      <workItem from="1670503422548" duration="11820000" />
+      <workItem from="1670535626006" duration="1333000" />
+      <workItem from="1670570593482" duration="10684000" />
     </task>
+    <task id="LOCAL-00001" summary="TP1">
+      <created>1670516722728</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1670516722728</updated>
+    </task>
+    <task id="LOCAL-00002" summary="TP1">
+      <created>1670516740619</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1670516740619</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Affichage de la sphère dans l'interface">
+      <created>1670536961829</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1670536961829</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Zoom v1">
+      <created>1670573431140</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1670573431140</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Photo de la terre">
+      <created>1670580542292</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1670580542292</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -153,6 +151,9 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="TP1" />
-    <option name="LAST_COMMIT_MESSAGE" value="TP1" />
+    <MESSAGE value="Affichage de la sphère dans l'interface" />
+    <MESSAGE value="Zoom v1" />
+    <MESSAGE value="Photo de la terre" />
+    <option name="LAST_COMMIT_MESSAGE" value="Photo de la terre" />
   </component>
 </project>

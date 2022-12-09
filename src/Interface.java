@@ -1,19 +1,20 @@
 import javafx.application.Application;
-import javafx.scene.Group;
 import javafx.scene.PerspectiveCamera;
 import javafx.scene.Scene;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.scene.transform.Translate;
 import javafx.stage.Stage;
+
+import java.util.concurrent.atomic.AtomicReference;
+
 public class Interface extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
+        AtomicReference<Double> base = new AtomicReference<>((double) 0);
         primaryStage.setTitle("Hello world");
         Earth earth = new Earth();
         Pane pane = new Pane(earth);
-        //Group root = new Group();
-        //Pane pane = new Pane(root);
         Scene ihm = new Scene(pane, 600, 400,true);
 
 
@@ -26,12 +27,13 @@ public class Interface extends Application {
         ihm.addEventHandler(MouseEvent.ANY, event -> {
             if (event.getEventType() == MouseEvent.MOUSE_PRESSED) {
                 System.out.println("Clicked on : (" + event.getSceneX()+ ", "+ event.getSceneY()+ ")");
-                double base = event.getSceneY();
+                base.set(event.getSceneY());
             }
             if (event.getEventType() == MouseEvent.MOUSE_DRAGGED) {
-                double diff = (event.getSceneY() - 200)/10;
+                double diff = (event.getSceneY() - base.get());
                 camera.getTransforms().add(new Translate(0,0,diff));
-                System.out.println(diff);// A vous de compl´eter
+                System.out.println(camera.getTranslateZ());
+                base.set(event.getSceneY());
                 //System.out.println("dragged on : (" + event.getSceneX()+ ", "+ event.getSceneY()+")");
             }
 

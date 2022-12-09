@@ -2,7 +2,7 @@ public class Main {
     public static void main(String[] args) {
 
 
-        World w = new World("C:/Users/Moi/IdeaProjects/DataFlight/src/ressource/airport-codes_no_comma.csv");
+        World w = new World("src/ressource/airport-codes_no_comma.csv");
         System.out.println("Found " + w.getList().size() + " airports.");
         Aeroport test = w.findNearestAirport(48.7845774,2.3846886);
         Aeroport test2 = w.findByCode("OSL");

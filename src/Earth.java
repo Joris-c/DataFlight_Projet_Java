@@ -12,9 +12,12 @@ import java.util.ArrayList;
 
 public class Earth extends Group {
 
-    Sphere sph = new Sphere(300);
-    Rotate ry = new Rotate();
-    PhongMaterial map = new PhongMaterial();
+    private Sphere sph = new Sphere(300);
+    private Rotate ry = new Rotate();
+    private PhongMaterial map = new PhongMaterial();
+
+    long diff_time = 0;
+
 
 
     public Earth() {
@@ -23,14 +26,21 @@ public class Earth extends Group {
         } catch (MalformedURLException e) {
             throw new RuntimeException(e);
         }
+
+        this.sph.setRotationAxis(ry.Y_AXIS);
         this.sph.setMaterial(map);
         this.getChildren().add(sph);
 
         AnimationTimer animationTimer = new AnimationTimer() {
             @Override
             public void handle(long time) {
+                long rTime = 15000000;
                 System.out.println("Valeur de time : " + time);
-                ry.setAngle(23.45); // A compl´eter
+                diff_time = time;
+                sph.rotateProperty().set(sph.getRotate()+0.2);
+                //sph.rotateProperty().set(ry);
+                //boucle avec i qui s'incremente pour la durée
+
             }
         };
         animationTimer.start();
