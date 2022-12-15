@@ -8,7 +8,6 @@ import javafx.scene.transform.Rotate;
 
 import java.io.File;
 import java.net.MalformedURLException;
-import java.util.ArrayList;
 
 public class Earth extends Group {
 
@@ -26,25 +25,21 @@ public class Earth extends Group {
         } catch (MalformedURLException e) {
             throw new RuntimeException(e);
         }
-
-        this.sph.setRotationAxis(ry.Y_AXIS);
+        ry.setAxis(Rotate.Y_AXIS);
         this.sph.setMaterial(map);
         this.getChildren().add(sph);
 
         AnimationTimer animationTimer = new AnimationTimer() {
             @Override
             public void handle(long time) {
-                long rTime = 15000000;
-                System.out.println("Valeur de time : " + time);
-                diff_time = time;
-                sph.rotateProperty().set(sph.getRotate()+0.2);
-                //sph.rotateProperty().set(ry);
-                //boucle avec i qui s'incremente pour la durée
-
+                //System.out.println("Valeur de time : " + time);
+                ry.setAngle(0.15); // A compl´eter
+                sph.getTransforms().add(ry);
             }
         };
         animationTimer.start();
     }
+
 
 
 
