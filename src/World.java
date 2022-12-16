@@ -20,8 +20,10 @@ public class World {
                 String fields[]=s.split(",");
                 // Une bonne id´ee : placer un point d'arr^et ici pour du debuggage.
                 if (fields[1].equals("large_airport")){
-                    Aeroport aeroport = new Aeroport(fields[2],Double.parseDouble(fields[12]),Double.parseDouble(fields[11]),fields[9],fields[5]);
-                    list.add(aeroport);
+                    if(!fields[9].equals("")) {
+                        Aeroport aeroport = new Aeroport(fields[2], Double.parseDouble(fields[12]), Double.parseDouble(fields[11]), fields[9], fields[5]);
+                        list.add(aeroport);
+                    }
                 }
                 s = buf.readLine();
             }
@@ -50,7 +52,7 @@ public class World {
         return nearest;
     }
     public double distance(double lat1, double long1, double lat2, double long2){
-        double n = Math.pow((lat2- lat1),2) + Math.pow((long2-long1)*Math.cos((lat1+lat2)/2),2);
+        double n = Math.pow((lat2- lat1),2) + Math.pow((long2-long1)*Math.cos(Math.toRadians(lat1+lat2)/2),2);
         return n;
     }
     public Aeroport findByCode(String code){

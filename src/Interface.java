@@ -1,5 +1,7 @@
 import javafx.application.Application;
+import javafx.geometry.Point2D;
 import javafx.geometry.Point3D;
+import javafx.scene.Node;
 import javafx.scene.PerspectiveCamera;
 import javafx.scene.Scene;
 import javafx.scene.input.MouseButton;
@@ -13,13 +15,16 @@ import javafx.stage.Stage;
 import java.util.concurrent.atomic.AtomicReference;
 
 public class Interface extends Application {
+
+    World w = new World("src/ressource/airport-codes_no_comma.csv");
+
     @Override
     public void start(Stage primaryStage) throws Exception{
         AtomicReference<Double> base = new AtomicReference<>((double) 0);
         primaryStage.setTitle("Hello world");
         Earth earth = new Earth();
         Pane pane = new Pane(earth);
-        Scene ihm = new Scene(pane, 600, 400,true);
+        Scene ihm = new Scene(pane, 600, 400,false);
 
 
         PerspectiveCamera camera = new PerspectiveCamera(true);
@@ -30,7 +35,7 @@ public class Interface extends Application {
         ihm.setCamera(camera);
         ihm.addEventHandler(MouseEvent.ANY, event -> {
             if (event.getEventType() == MouseEvent.MOUSE_PRESSED) {
-                System.out.println("Clicked on : (" + event.getSceneX()+ ", "+ event.getSceneY()+ ")");
+                //System.out.println("Clicked on : (" + event.getSceneX()+ ", "+ event.getSceneY()+ ")");
                 base.set(event.getSceneY());
             }
             if (event.getEventType() == MouseEvent.MOUSE_DRAGGED) {
@@ -42,18 +47,20 @@ public class Interface extends Application {
             if (event.getButton()== MouseButton.SECONDARY && event.getEventType()==MouseEvent.MOUSE_CLICKED) {
                 PickResult pickResult = event.getPickResult();
                 if (pickResult.getIntersectedNode() != null) {
-                    double X = pickResult.getIntersectedPoint().getX();
-                    System.out.println("X = " + X);
-                    //double X = pickResult.getIntersectedTexCoord().getX();
-                    //double Y = pickResult.getIntersectedPoint().getY();
-                    //double latitude = (2*Math.toDegrees(Math.atan(Math.exp((0.5-Y))/0.2678)))-90 ;
-                    double longitude = 360 * (X - 0.5);
-                    System.out.println("longitude = " + longitude);
-                    //System.out.println("latitude = " + latitude);
-                    // Code `a compl´eter : on r´ecup`ere le point d'intersection
-                    // Conversion en longitude et lattitude
-                    // Recherche dans l'objet w de la classe World de l'a´eroport le plus proche.
-                    // Affichage dans la console
+                    if(pickResult.getIntersectedTexCoord() != null) {
+                        double X = pickResult.getIntersectedTexCoord().getX();
+                        double Y = pickResult.getIntersectedTexCoord().getY();
+                        double latitude = -180.0 * (Y - 0.5);
+                        double longitude = 360.0 * (X - 0.5);
+                        Aeroport a;
+                        a = w.findNearestAirport(latitude, longitude);
+                        System.out.println("a = " + a);
+                        earth.displayRedSphere(a);
+                        // Code `a compl´eter : on r´ecup`ere le point d'intersection
+                        // Conversion en longitude et lattitude
+                        // Recherche dans l'objet w de la classe World de l'a´eroport le plus proche.
+                        // Affichage dans la console
+                    }
                 }
             }
 
