@@ -1,0 +1,79 @@
+Index: src/Earth.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import javafx.animation.AnimationTimer;\r\nimport javafx.scene.Group;\r\nimport javafx.scene.image.Image;\r\nimport javafx.scene.paint.PhongMaterial;\r\nimport javafx.scene.shape.Box;\r\nimport javafx.scene.shape.Sphere;\r\nimport javafx.scene.transform.Rotate;\r\n\r\nimport java.io.File;\r\nimport java.net.MalformedURLException;\r\nimport java.util.ArrayList;\r\n\r\npublic class Earth extends Group {\r\n\r\n    private Sphere sph = new Sphere(300);\r\n    private Rotate ry = new Rotate();\r\n    private PhongMaterial map = new PhongMaterial();\r\n\r\n    long diff_time = 0;\r\n\r\n\r\n\r\n    public Earth() {\r\n        try {\r\n            map.setDiffuseMap(new Image(new File(\"src/ressource/earth_lights_4800.png\").toURI().toURL().toExternalForm()));\r\n        } catch (MalformedURLException e) {\r\n            throw new RuntimeException(e);\r\n        }\r\n\r\n        this.sph.setRotationAxis(ry.Y_AXIS);\r\n        this.sph.setMaterial(map);\r\n        this.getChildren().add(sph);\r\n\r\n        AnimationTimer animationTimer = new AnimationTimer() {\r\n            @Override\r\n            public void handle(long time) {\r\n                long rTime = 15000000;\r\n                System.out.println(\"Valeur de time : \" + time);\r\n                diff_time = time;\r\n                sph.rotateProperty().set(sph.getRotate()+0.2);\r\n                //sph.rotateProperty().set(ry);\r\n                //boucle avec i qui s'incremente pour la durée\r\n\r\n            }\r\n        };\r\n        animationTimer.start();\r\n    }\r\n\r\n\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Earth.java b/src/Earth.java
+--- a/src/Earth.java	(revision 3b9137ddfbcf01455df8f7a780486970003e8a13)
++++ b/src/Earth.java	(date 1671091302777)
+@@ -37,6 +37,8 @@
+                 long rTime = 15000000;
+                 System.out.println("Valeur de time : " + time);
+                 diff_time = time;
++                ry.setAxis(Rotate.Y_AXIS);
++                ry.setAngle(0.2);
+                 sph.rotateProperty().set(sph.getRotate()+0.2);
+                 //sph.rotateProperty().set(ry);
+                 //boucle avec i qui s'incremente pour la durée
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"8a314ede-1eea-4d14-83c7-ccfbce4d7c5f\" name=\"Changes\" comment=\"Photo de la terre\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/Earth.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/Earth.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/Interface.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/Interface.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/Main.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/Main.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2IdFBd0PuNIpZ6kwGHCgTjF08i7\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\r\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,\r\n    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;C:/Users/Moi/IdeaProjects/DataFlight/src/ressource/openjfx-19_windows-x64_bin-sdk/javafx-sdk-19/lib&quot;,\r\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,\r\n    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,\r\n    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;\r\n  }\r\n}</component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\Moi\\IdeaProjects\\DataFlight\\src\\ressource\" />\r\n    </key>\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\Moi\\IdeaProjects\\DataFlight\\src\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\" selected=\"Application.Interface\">\r\n    <configuration name=\"Interface\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"Interface\" />\r\n      <module name=\"DataFlight\" />\r\n      <option name=\"VM_PARAMETERS\" value=\"--module-path &quot;src/ressource/openjfx-19_windows-x64_bin-sdk/javafx-sdk-19/lib&quot; --add-modules javafx.controls\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"Main\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"Main\" />\r\n      <module name=\"DataFlight\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Application.Interface\" />\r\n        <item itemvalue=\"Application.Main\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"8a314ede-1eea-4d14-83c7-ccfbce4d7c5f\" name=\"Changes\" comment=\"\" />\r\n      <created>1670503421029</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1670503421029</updated>\r\n      <workItem from=\"1670503422548\" duration=\"11820000\" />\r\n      <workItem from=\"1670535626006\" duration=\"1333000\" />\r\n      <workItem from=\"1670570593482\" duration=\"10684000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"TP1\">\r\n      <created>1670516722728</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1670516722728</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"TP1\">\r\n      <created>1670516740619</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1670516740619</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"Affichage de la sphère dans l'interface\">\r\n      <created>1670536961829</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1670536961829</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"Zoom v1\">\r\n      <created>1670573431140</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1670573431140</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"Photo de la terre\">\r\n      <created>1670580542292</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1670580542292</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"6\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <option name=\"ADD_EXTERNAL_FILES_SILENTLY\" value=\"true\" />\r\n    <MESSAGE value=\"TP1\" />\r\n    <MESSAGE value=\"Affichage de la sphère dans l'interface\" />\r\n    <MESSAGE value=\"Zoom v1\" />\r\n    <MESSAGE value=\"Photo de la terre\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Photo de la terre\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 3b9137ddfbcf01455df8f7a780486970003e8a13)
++++ b/.idea/workspace.xml	(date 1671097181749)
+@@ -4,11 +4,9 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="8a314ede-1eea-4d14-83c7-ccfbce4d7c5f" name="Changes" comment="Photo de la terre">
++    <list default="true" id="8a314ede-1eea-4d14-83c7-ccfbce4d7c5f" name="Changes" comment="rotation">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/Earth.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Earth.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/Interface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interface.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -95,6 +93,10 @@
+       <workItem from="1670503422548" duration="11820000" />
+       <workItem from="1670535626006" duration="1333000" />
+       <workItem from="1670570593482" duration="10684000" />
++      <workItem from="1670592045478" duration="132000" />
++      <workItem from="1670594757413" duration="211000" />
++      <workItem from="1671091013157" duration="288000" />
++      <workItem from="1671097139934" duration="42000" />
+     </task>
+     <task id="LOCAL-00001" summary="TP1">
+       <created>1670516722728</created>
+@@ -131,7 +133,14 @@
+       <option name="project" value="LOCAL" />
+       <updated>1670580542292</updated>
+     </task>
+-    <option name="localTasksCounter" value="6" />
++    <task id="LOCAL-00006" summary="rotation">
++      <created>1670592162548</created>
++      <option name="number" value="00006" />
++      <option name="presentableId" value="LOCAL-00006" />
++      <option name="project" value="LOCAL" />
++      <updated>1670592162548</updated>
++    </task>
++    <option name="localTasksCounter" value="7" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -154,6 +163,7 @@
+     <MESSAGE value="Affichage de la sphère dans l'interface" />
+     <MESSAGE value="Zoom v1" />
+     <MESSAGE value="Photo de la terre" />
+-    <option name="LAST_COMMIT_MESSAGE" value="Photo de la terre" />
++    <MESSAGE value="rotation" />
++    <option name="LAST_COMMIT_MESSAGE" value="rotation" />
+   </component>
+ </project>
+\ No newline at end of file
