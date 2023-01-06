@@ -56,11 +56,10 @@ public class World {
         return n;
     }
     public Aeroport findByCode(String code){
-        Aeroport aeroport = null;
         code = code.toUpperCase();
-        for (Aeroport aero : list) {
-            if (aero.getIATA().equals(code)){
-                return aero;
+        for (Aeroport aeroport : list) {
+            if (aeroport.getIATA().equals(code)){
+                return aeroport;
             }
         }
         return null;

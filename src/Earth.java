@@ -12,11 +12,14 @@ import javafx.scene.transform.Rotate;
 
 import java.io.File;
 import java.net.MalformedURLException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Earth extends Group {
     private Sphere sph = new Sphere(300);
     private Sphere s = new Sphere(2);
+
+    private ArrayList<Sphere> list_airport = null;
     boolean behindEarth = false;
 
     private Rotate ry = new Rotate();
@@ -30,6 +33,7 @@ public class Earth extends Group {
     public Earth() {
         try {
             map.setDiffuseMap(new Image(new File("src/ressource/earth_lights_4800.png").toURI().toURL().toExternalForm()));
+            //map.setSelfIlluminationMap(new Image(new File("src/ressource/earth_lights_4800.png").toURI().toURL().toExternalForm()));
         } catch (MalformedURLException e) {
             throw new RuntimeException(e);
         }
@@ -54,8 +58,32 @@ public class Earth extends Group {
                     behindEarth = true;
                 }
                 s.setVisible(behindEarth);
+                for (Node child: getManagedChildren()
+                     ) {
+                    double z = child.localToScene(child.getTranslateX(), child.getTranslateY(), child.getTranslateZ()).getZ();
+                    if(z>(z_earth-110)){
+                        behindEarth = false;
+                    }else {
+                        behindEarth = true;
+                    }
+
+                }
 
 
+                /*if (list_airport != null) {
+                    for (Sphere sph_airport : list_airport
+                    ) {
+                        double z = sph_airport.localToScene(sph_airport.getTranslateX(), sph_airport.getTranslateY(), sph_airport.getTranslateZ()).getZ();
+                        if (z > (z_earth - 110)) {
+                            behindEarth = false;
+                        } else {
+                            behindEarth = true;
+                        }
+                        sph_airport.setVisible(behindEarth);
+
+                    }
+
+                }*/
 
             }
         };
@@ -63,29 +91,55 @@ public class Earth extends Group {
     }
 
     public Sphere createSphere(Aeroport a, Color color){
-
-        this.s.setTranslateX(300 * Math.cos(Math.toRadians(a.getLatitude() * 0.65)) * Math.sin(Math.toRadians(a.getLongitude())));
-        this.s.setTranslateY(-300 * Math.sin(Math.toRadians(a.getLatitude() * 0.65)));
-        this.s.setTranslateZ(-300 * Math.cos(Math.toRadians(a.getLatitude() * 0.65)) * Math.cos(Math.toRadians(a.getLongitude())));
+        if(a != null) {
+            Sphere new_sphere = new Sphere(2);
+            new_sphere.setTranslateX(300 * Math.cos(Math.toRadians(a.getLatitude() * 0.65)) * Math.sin(Math.toRadians(a.getLongitude())));
+            new_sphere.setTranslateY(-300 * Math.sin(Math.toRadians(a.getLatitude() * 0.65)));
+            new_sphere.setTranslateZ(-300 * Math.cos(Math.toRadians(a.getLatitude() * 0.65)) * Math.cos(Math.toRadians(a.getLongitude())));
         /*s.setTranslateX(150 * Math.cos(Math.toRadians(a.getLatitude()-13))*Math.sin(Math.toRadians(a.getLongitude()-13)));
         s.setTranslateY(-150 * Math.sin(Math.toRadians(a.getLatitude()-13)));
         s.setTranslateZ(-150 * Math.cos(Math.toRadians(a.getLatitude()-13))*Math.sin(Math.toRadians(a.getLongitude()-13)));*/
-        this.s.setMaterial(new PhongMaterial(color));
-        return this.s;
+            new_sphere.setMaterial(new PhongMaterial(color));
+            System.out.println("a = " + a);
+            return new_sphere;
+        }
+        return null;
     }
 
     public void displayRedSphere(Aeroport a){
         if(a != null) {
             if(this.getManagedChildren().contains(this.s)){
-                createSphere(a, Color.RED);
+                this.s = createSphere(a, Color.RED);
             }
             else {
-                this.getChildren().add(createSphere(a, Color.RED));
+                Sphere new_sph = createSphere(a, Color.RED);
+                if(new_sph != null){
+                    this.getChildren().add(new_sph);
+                }
+
             }
 
         }
         else {
             throw new IllegalArgumentException("Aeroport null");
+        }
+    }
+
+    public void displayYellowSphere(ArrayList<Flight> listOfFlight){
+        //this.list_airport = null;
+        if(listOfFlight != null) {
+            for (Flight f: listOfFlight
+                 ) {
+                if (f != null){
+                    Sphere new_sph = createSphere(f.getDeparture(), Color.YELLOW);
+                    if(new_sph != null){
+                        //this.getChildren().add(new_sph);
+                    }
+                }
+            }
+        }
+        else {
+            throw new IllegalArgumentException("liste vide");
         }
     }
 

@@ -14,12 +14,21 @@ import javafx.scene.paint.Paint;
 import javafx.scene.transform.Translate;
 import javafx.stage.Stage;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.net.URI;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
+import java.util.ArrayList;
 import java.util.concurrent.atomic.AtomicReference;
 
 //API KEY : 367de72a690d5732c70ac8f4dfeb6737
 public class Interface extends Application {
 
     World w = new World("src/ressource/airport-codes_no_comma.csv");
+
+    ArrayList<Flight> listOfFlight = new ArrayList<Flight>();
     double z_max = -500;
     double z_min = -1500;
     double current_z = -1000;
@@ -38,13 +47,8 @@ public class Interface extends Application {
         //pane.setBackground(new Background(bg));
 
         ImageView bg1 = new ImageView();
-        bg1.setImage(new Image("https://www.science-et-vie.com/wp-content/uploads/scienceetvie/2020/05/d-voie-lactee-est-elle-visible.jpg"));
         Scene ihm = new Scene(pane, 600, 400,false);
 
-        //ihm.setFill(Color.GRAY);
-
-
-        //ihm.setFill(Color.GREEN);
 
         PerspectiveCamera camera = new PerspectiveCamera(true);
         camera.setTranslateZ(-1000);
@@ -83,6 +87,26 @@ public class Interface extends Application {
                         // Conversion en longitude et lattitude
                         // Recherche dans l'objet w de la classe World de l'a´eroport le plus proche.
                         // Affichage dans la console
+                        try {
+
+                            BufferedReader buf = new BufferedReader(new FileReader("src/ressource/JsonOrly.txt"));
+                            String s = buf.readLine();
+                            System.out.println("requete http");
+                            //HttpClient client = HttpClient.newHttpClient();
+
+                            //HttpRequest request = HttpRequest.newBuilder()
+                            //        .uri(URI.create("http://api.aviationstack.com/v1/flights?access_key=cfaf27d3b7c76c08bafee49ddb0df72c&arr_iata=" + a.getIATA()))
+                            //        .build();
+                            //HttpResponse response = client.send(request, HttpResponse.BodyHandlers.ofString());
+                            JsonFlightFiller json = new JsonFlightFiller(s,w);
+                            listOfFlight = json.getList();
+                            //json.displayFlight();
+                            earth.displayYellowSphere(listOfFlight);
+
+                        }
+                        catch (Exception e){
+                            e.printStackTrace();
+                        }
                     }
                 }
             }
