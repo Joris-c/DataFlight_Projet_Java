@@ -90,11 +90,13 @@ public class Interface extends Application {
                             System.out.println("requete http");
                             HttpClient client = HttpClient.newHttpClient();
                             System.out.println("http://api.aviationstack.com/v1/flights?access_key=367de72a690d5732c70ac8f4dfeb6737&arr_iata=" + a.getIATA());
+                            System.out.println("Requete en cours");
                             HttpRequest request = HttpRequest.newBuilder()
                                     .uri(URI.create("http://api.aviationstack.com/v1/flights?access_key=cfaf27d3b7c76c08bafee49ddb0df72c&arr_iata=" + a.getIATA() + "&limit=40"))
                                     .build();
 
                             HttpResponse response = client.send(request, HttpResponse.BodyHandlers.ofString());
+                            System.out.println("Requete terminée");
                             System.out.println("response.body().toString() = " + response.body().toString());
                             JsonFlightFiller json = new JsonFlightFiller(response.body().toString(),w);
                             listOfFlight = json.getList();

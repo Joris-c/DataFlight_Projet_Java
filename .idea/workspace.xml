@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8a314ede-1eea-4d14-83c7-ccfbce4d7c5f" name="Changes" comment="update tp">
-      <change afterPath="$PROJECT_DIR$/src/Request.java" afterDir="false" />
+    <list default="true" id="8a314ede-1eea-4d14-83c7-ccfbce4d7c5f" name="Changes" comment="Fin du TP de Java (sans les Threads)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Earth.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Earth.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Interface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/JsonFlightFiller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/JsonFlightFiller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/World.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,7 +130,7 @@
       <workItem from="1673019593934" duration="596000" />
       <workItem from="1673097252627" duration="623000" />
       <workItem from="1674506900813" duration="1875000" />
-      <workItem from="1674584342003" duration="5866000" />
+      <workItem from="1674584342003" duration="7692000" />
     </task>
     <task id="LOCAL-00001" summary="TP1">
       <created>1670516722728</created>
@@ -178,7 +174,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672664064354</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Fin du TP de Java (sans les Threads)">
+      <created>1674591785709</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1674591785709</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -202,7 +205,8 @@
     <MESSAGE value="Zoom v1" />
     <MESSAGE value="Photo de la terre" />
     <MESSAGE value="update tp" />
-    <option name="LAST_COMMIT_MESSAGE" value="update tp" />
+    <MESSAGE value="Fin du TP de Java (sans les Threads)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fin du TP de Java (sans les Threads)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
