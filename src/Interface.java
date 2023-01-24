@@ -83,24 +83,22 @@ public class Interface extends Application {
                         a = w.findNearestAirport(latitude, longitude);
                         System.out.println("a = " + a);
                         earth.displayRedSphere(a);
-                        // Code `a compl´eter : on r´ecup`ere le point d'intersection
-                        // Conversion en longitude et lattitude
-                        // Recherche dans l'objet w de la classe World de l'a´eroport le plus proche.
-                        // Affichage dans la console
                         try {
 
                             BufferedReader buf = new BufferedReader(new FileReader("src/ressource/JsonOrly.txt"));
                             String s = buf.readLine();
                             System.out.println("requete http");
-                            //HttpClient client = HttpClient.newHttpClient();
+                            HttpClient client = HttpClient.newHttpClient();
+                            System.out.println("http://api.aviationstack.com/v1/flights?access_key=367de72a690d5732c70ac8f4dfeb6737&arr_iata=" + a.getIATA());
+                            HttpRequest request = HttpRequest.newBuilder()
+                                    .uri(URI.create("http://api.aviationstack.com/v1/flights?access_key=cfaf27d3b7c76c08bafee49ddb0df72c&arr_iata=" + a.getIATA() + "&limit=40"))
+                                    .build();
 
-                            //HttpRequest request = HttpRequest.newBuilder()
-                            //        .uri(URI.create("http://api.aviationstack.com/v1/flights?access_key=cfaf27d3b7c76c08bafee49ddb0df72c&arr_iata=" + a.getIATA()))
-                            //        .build();
-                            //HttpResponse response = client.send(request, HttpResponse.BodyHandlers.ofString());
-                            JsonFlightFiller json = new JsonFlightFiller(s,w);
+                            HttpResponse response = client.send(request, HttpResponse.BodyHandlers.ofString());
+                            System.out.println("response.body().toString() = " + response.body().toString());
+                            JsonFlightFiller json = new JsonFlightFiller(response.body().toString(),w);
                             listOfFlight = json.getList();
-                            //json.displayFlight();
+                            json.displayFlight();
                             earth.displayYellowSphere(listOfFlight);
 
                         }

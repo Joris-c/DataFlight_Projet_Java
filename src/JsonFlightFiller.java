@@ -14,7 +14,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 
-public class JsonFlightFiller {
+public class JsonFlightFiller extends Thread{
 
     ArrayList<Flight> list = new ArrayList<Flight>();
 
